@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 lambdas = [0.4, 0.5, 0.6]  # 这里是你的三个 lambda 值
 
+name = 'td_error_abs'
+
 # 从文件中读取数据
 data = {}
 for _lambda in lambdas:
@@ -42,10 +44,10 @@ def plot_and_save(name, lambdas, file_name='output.png'):
         # 绘制平滑的移动平均线
         plt.plot(x_ma, y_ma, linestyle='--', color=colors[i], label=labels[i])
 
-    # 绘制红色虚线， y = 0.3
-    plt.axhline(y=0.3, color='red', linestyle='--')
+    # # 绘制红色虚线， y = 0.3
+    # plt.axhline(y=0.3, color='red', linestyle='--')
 
-    plt.axvline(x=5e5, color='red', linestyle='--')
+    # plt.axvline(x=5e5, color='red', linestyle='--')
     
     # 添加标题和标签
     plt.title(f'{name}')
@@ -58,4 +60,4 @@ def plot_and_save(name, lambdas, file_name='output.png'):
     plt.close()
 
 # 使用函数绘制并保存图片
-plot_and_save('test_battle_won_mean', lambdas, 'test_battle_won_mean_plot_5_avg.png')
+plot_and_save(name, lambdas, f'{name}_plot_5_avg.png')
