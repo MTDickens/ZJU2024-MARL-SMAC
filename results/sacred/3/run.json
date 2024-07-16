@@ -1,0 +1,111 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/kamrthomas6126/pymarl/src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.24.4",
+      "PyYAML==3.13",
+      "sacred==0.8.0",
+      "torch==2.3.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [
+      {
+        "commit": "c971afdceb34635d31b778021b0ef90d7af51e86",
+        "dirty": true,
+        "url": "https://github.com/oxwhirl/pymarl"
+      },
+      {
+        "commit": "c971afdceb34635d31b778021b0ef90d7af51e86",
+        "dirty": true,
+        "url": "https://github.com/oxwhirl/pymarl"
+      },
+      {
+        "commit": "c971afdceb34635d31b778021b0ef90d7af51e86",
+        "dirty": true,
+        "url": "https://github.com/oxwhirl/pymarl"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_63d7d00072f4e5be0310acb11aa60581.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_7911ddab0b7ff30dd1480a75183ffc39.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_aa14e56e60b01dd7a9ddb8e6cdf36b85.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"../src/main.py\", line 35, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/home/kamrthomas6126/pymarl/src/run.py\", line 48, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/home/kamrthomas6126/pymarl/src/run.py\", line 166, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
+    "  File \"/home/kamrthomas6126/pymarl/src/runners/episode_runner.py\", line 49, in run\n    self.reset()\n",
+    "  File \"/home/kamrthomas6126/pymarl/src/runners/episode_runner.py\", line 45, in reset\n    self.env.reset()\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/smac/env/starcraft2/starcraft2.py\", line 403, in reset\n    self._launch()\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/smac/env/starcraft2/starcraft2.py\", line 318, in _launch\n    self._run_config = run_configs.get(version=self.game_version)\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/pysc2/run_configs/__init__.py\", line 36, in get\n    return max(configs.values(), key=lambda c: c.priority())(version=version)\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/pysc2/run_configs/platforms.py\", line 175, in __init__\n    super(Linux, self).__init__(base_dir, \"SC2_x64\", version=version, env=env)\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/pysc2/run_configs/platforms.py\", line 57, in __init__\n    super(LocalBase, self).__init__(\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/pysc2/run_configs/lib.py\", line 128, in __init__\n    self.version = self._get_version(version)\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/pysc2/run_configs/lib.py\", line 236, in _get_version\n    versions = self.get_versions(containing=game_version)\n",
+    "  File \"/home/kamrthomas6126/miniconda3/envs/pymarl/lib/python3.8/site-packages/pysc2/run_configs/platforms.py\", line 90, in get_versions\n    for v in os.listdir(versions_dir)\n",
+    "FileNotFoundError: [Errno 2] No such file or directory: '/home/kamrthomas6126/pymarl/0.6_lambda/3rdparty/StarCraftII/Versions'\n"
+  ],
+  "heartbeat": "2024-07-13T17:15:12.039903",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD EPYC 7B13",
+    "hostname": "instance-20240713-122215",
+    "os": [
+      "Linux",
+      "Linux-6.1.0-22-cloud-amd64-x86_64-with-glibc2.17"
+    ],
+    "python_version": "3.8.19"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserve": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=5m_vs_6m"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-07-13T17:15:11.428900",
+  "status": "FAILED",
+  "stop_time": "2024-07-13T17:15:12.041202"
+}

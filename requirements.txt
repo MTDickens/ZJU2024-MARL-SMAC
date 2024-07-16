@@ -1,0 +1,17 @@
+numpy 
+scipy 
+PyYAML==3.13 
+matplotlib
+imageio
+tensorboard-logger
+pygame
+jsonpickle==0.9.6
+setuptools
+torch
+torchvision 
+snakeviz 
+pytest 
+probscale
+sacred
+cloudpickle
+git+https://github.com/oxwhirl/smac.git
